@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6];
+    let [firstnum, secondnum, , forthnum, ...others] = arr;
+    
+    console.log(firstnum);
+    console.log(secondnum);
+    console.log(forthnum);
+    console.log(others); // array
+
+    let arr2 = [1, 2];
+    let [a, b, c = 3] = arr2;
+
+    function test(a, b, c) {
+        console.log(a, b, c);
+    }
+
+    test(...[1, 2, 3]);
+
+    let person = { name: "길동", age: 33};
+    let { name, age, address = "주소값" } = person;
+
+    console.log(name);
+    console.log(age);
+    console.log(address);
+
+    function getArea( {width, height}) {
+        return width * height;
+    }
+
+    let r = { width: 100, height: 50 };
+    console.log(getArea(r));
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+:root {
+	--bbb: blue;
+	--dark-shadow: 10px 10px 10px black;
+	--white-shadow: 10px 10px 10px grey;
+}
+.container {
+	/*color: red;*/
+	--my-text-color: red;
+}
+
+h2 {
+	color: var(--my-text-color);
+	box-shadow: var(--dark-shadow);
+}
+h3 {
+	color: var(--bbb);
+	box-shadow: var(--grey-shadow);
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>헤딩텍스트</h2>
+		<div class="child">
+			<p>파라그래프</p>
+		</div>
+		<h3>다 음 헤 딩</h3>
+	</div>
+</body>
+</html>

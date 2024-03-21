@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+    var age = "전역변수";
+
+    let printAge = () => {
+        console.log(this.age);
+    }
+
+    printAge();
+
+    let person = {
+        name: "길동"
+        , age: 33
+    }
+    person.f = printAge;
+    person.f();
+
+    let dog = {
+        age: 4
+        , f: printAge
+    }
+    dog.f();
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hello = function() {
+            console.log("안녕하세요");
+        }
+    }
+    let dooli = new Person("둘리", 22);
+    let kildong = new Person("길동", 44);
+
+    // console.log(dooli.name);
+    // console.log(dooli.age);
+
+    // console.log(kildong);
+    dooli.hello();
+    kildong.hello();
+
+    console.log(dooli instanceof Person);
+    console.log(kildong instanceof Person);
+
+    dooli.hi = function() {
+        console.log("하이");
+    };
+    dooli.hi();
+    // kildong.hi();
+
+    Person.prototype.introduce = function() {
+        console.log(`제 이름은 ${this.name}이고 나이는 ${this.age}입니다.`);
+    };
+    dooli.introduce();
+    kildong.introduce();
+
+    // 변수이름.__proto__
+    Object.getPrototypeOf(dooli).world = function() {
+        console.log("Wolrd");
+    };
+    dooli.world();
+    kildong.world();
+</script>
+</html>

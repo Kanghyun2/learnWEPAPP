@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .links {
+                font-size: 30px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin: 1em;
+                    height: 1em;
+
+                    &:nth-child(1) {
+                        --item-color: red;
+                    }
+                    &:nth-child(2) {
+                        --item-color: orange;
+                    }
+                    &:nth-child(3) {
+                        --item-color: gold;
+                    }
+                    &:nth-child(4) {
+                        --item-color: green;
+                    }
+                    &:nth-child(5) {
+                        --item-color: blue;
+                    }
+
+                    &::before {
+                        display: inline-block;
+                        content: "";
+                        width: 0.25em;
+                        height: 100%;
+                        background-color: var(--item-color);
+                    }
+
+                    a {
+                        display: inline-block;
+                        color: inherit;
+                        text-decoration: none;
+
+                        &::first-letter {
+                            color: var(--item-color);
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="#">Tags</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </main>
+    </body>
+</html>

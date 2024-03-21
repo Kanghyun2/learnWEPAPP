@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+    let book = {
+        title: "파워자바",
+        price: 15000,
+        print: function() {
+            console.log("책 객체의 print 함수");
+        }
+        , printAll: function() {
+            console.log(this.title, this.price);
+        }
+    };
+
+    let author = {
+        name: "천인국",
+        age : 33,
+        introduce: function() {
+            console.log(`제 이름은 ${this.name}이고 나이는 ${this.age}입니다.`); // template literal string
+        }
+    };
+
+    book.writer = author;
+    console.log(book);
+
+    book.print();
+    book.printAll();
+    
+    author.introduce();
+</script>
+</html>

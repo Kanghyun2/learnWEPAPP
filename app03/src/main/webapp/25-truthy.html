@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+    // if 조건식에서 false인 경우는 다음과 같은 값일 경우.
+    // false
+    // null
+    // undefined
+    // 0
+    // -0
+    // NaN
+    // "" (빈문자열)
+
+    if ("0") { 
+        //참
+    }
+
+    let value = "asdf" && 100 && 3.5; // && 왼쪽부터 오른쪽으로 . 첫번째 false 평가인 값을 반환. 모두 true인 경우 마지막 값 반환.
+    console.log(value);
+
+    let value2 = "" || 0 || false || "v" || NaN;
+    console.log(value2);
+
+    console.log(!"hey");
+</script>
+</html>

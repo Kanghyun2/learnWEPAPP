@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+function test(obj) { // 콜백함수 : 함수 내부에서 호출할 함수를 파라미터로 전달받는 형태
+    obj();
+}
+test(function () {
+    console.log("함수를 전달");
+});
+test(function () {
+    console.log("다른 함수를 전달");
+});
+
+    // function test(obj) {
+    //     console.log(obj);
+    // }
+
+    // let person = { name: "길동", age: 33 };
+
+    // test(person);
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body></body>
+  <script>
+    class Person {
+      #name;
+      #age;
+
+      constructor(name, age) {
+        this.#name = name;
+        this.#age = age;
+      }
+      get name() {
+        return this.#name;
+      }
+      set name(name) {
+        this.#name = name;
+      }
+      hello() {
+        console.log("안녕하세요");
+      }
+      toString() {
+        return `제 이름은 ${this.#name}이고 나이는 ${this.#age}입니다.`;
+      }
+      valueOf() {
+        return this.#age;
+      }
+    }
+    let d = new Person("둘리", 22);
+    d.hello();
+
+    console.log(`객체를 문자열로 활용할 때는 toString이 호출됩니다: ${d}`);
+    console.log(100 - d);
+    // console.log(d.name);
+    // d.name = "새이름";
+    // console.log(d.name);
+
+    class Student extends Person {
+      #score;
+
+      constructor(name, age, score) {
+        super(name, age);
+        this.#score = score;
+      }
+      get score() {
+        this.#score = score;
+      }
+      set score(score) {
+        this.#score = score;
+      }
+    }
+    let s1 = new Student("길동", 44, 100);
+    
+  </script>
+</html>

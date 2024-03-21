@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body></body>
+  <script>
+    // 자바스크립트는 프로토타입(prototype) 객체지향 언어
+    let myObj = {}; // 객체의 선언과 초기화
+    myObj.myProp = "속성정의"; // property
+    console.log(myObj);
+
+    console.log("속성값 확인", myObj.myProp);
+
+    myObj.myProp = "값변경";
+    console.log("속성값 확인", myObj.myProp);
+
+    myObj.myProp = "100";
+    console.log("속성값 확인", myObj.myProp);
+
+    let yourObj = {};
+    let propName = "속성이름";
+    yourObj[propName] = "Test";
+    console.log(yourObj["속"+"성이름"]);
+  </script>
+</html>

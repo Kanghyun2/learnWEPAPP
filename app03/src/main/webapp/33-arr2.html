@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr = [];
+    arr[0] = 100;
+    arr[1] = 200;
+    arr.push(300);
+    arr.unshift(0);
+    // arr[10] = 300;
+    console.log(arr);
+
+    console.log(arr.pop());
+    console.log(arr.shift());
+
+    arr.length = 0; // 길이값 잒게 만들었을때 원소의 손실
+
+    console.log(arr);
+</script>
+</html>

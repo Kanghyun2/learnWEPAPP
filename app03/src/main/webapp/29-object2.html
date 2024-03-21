@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body></body>
+  <script>
+    // Object.defineProperty
+
+    function Person(name, age) {
+      let _name = name;
+      let _age = age;
+
+      return {
+        get name() {
+            return _name;
+        },
+        set name(name) {
+            _name = name;
+        }
+      }
+    }
+    let dooli = new Person("둘리", 22);
+    console.log(dooli.name);
+    dooli.name = "새이름";
+    console.log(dooli.name);
+  </script>
+</html>

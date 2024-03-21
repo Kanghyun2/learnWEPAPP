@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body></body>
+  <script>
+    let strs = ["apple", "banana", "cat", "dog", "elephant"];
+
+    // 배열의 원소 중 길이가 3인 문자열 배열
+    let result = strs.filter((x) => x.length == 3);
+    console.log(result);
+
+    // 배열의 원소의 name 속성(문자열)의 길이가 3인 원소를 찾고
+    // 각 속성값을 template literal string로 변환하여
+    // 출력
+    let objs = [
+        { name: "apple", num: 1000 }
+        , { name: "banana", num: 1500 }
+        , { name: "cat", num: 10 }
+        , { name: "dog", num: 5 }
+        , { name: "elephant", num: 14 }
+    ];
+    // 함수형 프로그래밍
+    objs.filter((x) => x.name.length == 3)
+        .sort((a, b) => a.num - b.num)
+        .map((x) => `이름값: ${x.name}, 숫자값: ${x.num}`)
+        .forEach((x) => console.log(x));
+  </script>
+</html>

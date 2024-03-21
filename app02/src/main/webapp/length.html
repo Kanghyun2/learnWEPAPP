@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 단위</title>
+<style>
+	body {
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+		height : 250vh;
+	}
+	.container {
+		position: relative;
+		background-color: rgb(253, 244, 121);
+		width: 50%;
+		height: 10em;
+		top : 100px;
+		left: 100px;
+		
+		.my-child {
+			position: absolute;
+			background-color: red;
+			width: 20%;
+			height: 20%;
+			right: 50px;
+			bottom : 50px;
+		}
+	}
+	.top-right-fixed {
+		position: fixed;
+		background-color: blue;
+		width: 200px;
+		height: 200px;
+		top: 0;
+		right: 0;
+	}
+</style>
+</head>
+<body>
+		<div class="container"> 
+		<div class = "my-child">자슥</div>
+	</div>
+	<div class="top-right-fixed">
+		TEXT
+	</div>
+</body>
+</html>

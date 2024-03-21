@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	background-color: red;
+}
+.container {
+	background-color: green;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: red;
+}
+
+a:visited {
+	color: khaki;
+}
+
+label:has(input:checked) {
+	color: red;
+}
+input[type="checkbox"] {
+	/*	display: none; */
+	visibility: hidden;
+}
+button:hover {
+	background-color: aqua;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<p>TEXT</p>
+		<a href="flexbox.html">LINK</a> <label><input type="checkbox" />체크박스</label>
+		<button>버튼</button>
+		<label><input type="radio" />라디오버튼</label>
+	</div>
+</body>
+</html>

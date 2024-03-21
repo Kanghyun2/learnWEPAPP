@@ -1,0 +1,27 @@
+1. 프로젝트 구성(chap14) 및 라이브러리 추가(jstl, mysql driver, dbcp2)
+
+2. @ 446 > 데이터베이스(*** chap14 또는 임의이름 ***) 및 테이블 생성
+
+3. DBCP 구성
+@ 418 - 419 > DBCPInit.java
+    39번째 line *** 생성한 데이터베이스 이름 ***
+    41번째 line 아이디
+    42번째 line 비밀번호
+    64번째 line "chap14" -> "*** 생성한 데이터베이스 이름 ***"
+@ 421 상단 <sevlet> 태그 적혀있는거 -> web.xml에 추가
+@ 434 - 435 > JdbcUtil.java
+@ 442 - 443 > ConnectionProvider.java
+    11번째 line "guestbook" -> "*** 생성한 데이터베이스 이름 ***"
+(또는 BasicDataSource 구성으로 변경하셔도 됩니다.)
+
+4. 클래스 및 jsp 작성
+@ 448 - 449 > Message.java
+@ 450 - 452 > MessageDao.java
+@ 455 - 456 > MessageListView.java
+@ 457 - 458 > GetMesaageListService.java
+@ 458 - 459 > WriteMessageService.java
+@ 460 - 461 > DeleteMessageService.java
+@ 454, 461 - 462 > 예외 클래스 3개
+@ 462 - 467 > jsp 페이지들
+
+(WebContent 폴더 = webapp 폴더)

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body></body>
+  <script>
+    // sum(); hoisting 되지않아 에러 발생.
+    
+    // arrow 함수
+    let sum = (x, y) => console.log(x + y);
+
+    function minus(x, y) {
+        return x - y;
+    }
+    
+    function multiply(x, y) {}
+
+    let div = (x, y) => x / y;
+
+    let mod = (x, y) => {
+       // 여러 문장의 경우는 중괄호 사용 가능
+        return x % y; // 명시적 return 필요
+    };
+    
+    sum(100, 200);
+
+    let result = minus(400, 300);
+    console.log("결과값 확인", result);
+
+    let r = multiply(2, 8);
+    console.log(r);
+
+    let d = div(10 ,2);
+    console.log(d);
+  </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page Title</title>
+<style>
+	.links {
+		display: flex;
+		font-size: 30px;
+		margin: 0;
+		padding: 0;
+		
+		a {
+			display: block;
+			padding: 5px;
+			background-color: #ddd;
+			color: black;
+			text-decoration: none;
+			border-top: 1px solid #ddd;
+			border-bottom: 2px solid blueviolet;
+			
+			&:hover {
+				background-color: blueviolet;
+				color: white;
+			}
+		}
+		.dropdown {
+			
+			.submenus {
+				display: none;
+			}
+			
+			&:hover .submenus {
+				display: block;
+			}
+		}
+	}
+</style>
+</head>
+<body>
+	<nav>
+		<div class="links">
+			<a href="#">HOME</a>
+			<div class="dropdown">
+			<a href="#">MENUS</a>
+			<div class ="submenus">
+				<a href="#">TAGS</a>
+				<a href="#">ABOUT</a>
+				<a href="#">CONTACT</a>
+			</div>
+			</div>
+		</div>
+	</nav>
+	<main>
+		<p></p>
+	</main>
+</body>
+</html>

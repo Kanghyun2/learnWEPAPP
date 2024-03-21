@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <input type="number" id="left" />
+    <input type="number" id="right" />
+    <button id="plus">+</button>
+    <span id="result"></span>
+  </body>
+  <script>
+    let left = document.getElementById("left");
+    let right = document.getElementById("right");
+    let plus = document.getElementById("plus");
+    let result = document.getElementById("result");
+    plus.addEventListener("click", function (e) {
+        let leftNum = Number(left.value)
+        let rightNum = Number(right.value);
+
+        if (leftNum && rightNum) { // 0이 아니면 true
+            result.textContent = leftNum + rightNum;
+        } else {
+            result.textContent = "0이 아닌 수를 입력해주세요";
+        }
+    });
+
+    // if 조건식에서 false인 경우는 다음과 같은 값일 경우.
+    // false
+    // null
+    // undefined
+    // 0
+    // -0
+    // NaN
+    // "" (빈문자열)
+
+    if ("0") { //참
+        
+    }
+
+  </script>
+</html>

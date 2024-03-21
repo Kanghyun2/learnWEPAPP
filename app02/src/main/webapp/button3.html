@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.container {
+		display: flex;
+	}
+	.container div {
+		background-color: grey;
+		width: 100px;
+		height: 50px;
+		border: 1px solid black;
+		margin-right: 0;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+		background-image: url('헬스토매통.png'); 
+		background-size: cover; 
+	}
+	.container div span {
+		margin: auto;
+	}
+	.container div:last-child {
+		margin-right: 0;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div onclick="window.location.href='navbar.html';"><span>아</span></div>
+		<div onclick="window.location.href='navbar.html';"><span>잠</span></div>
+		<div onclick="window.location.href='navbar.html';"><span>온</span></div>
+		<div onclick="window.location.href='navbar.html';"><span>다</span></div>
+	</div>
+</body>
+</html>

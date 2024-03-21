@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.image {
+	width: 100px;
+	height: 100px;
+	
+	}
+	.container {
+		div {
+		display: inline-block;
+			background-color: aqua;
+			width: 100px;
+			border: 1px solid black;
+		}
+	}
+	.box {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 800px;
+	align-items: center;
+	justify-content: center;
+	
+		div {
+			background-color: aqua;
+			border: 1px solid black;
+
+		&:first-child {
+			flex: 1 0 auto;			
+		}
+		&:nth-child(2n){
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: 100px;
+		}
+		&:nth-child(3){
+			flex-grow: 1;
+			flex-shrink: 0;
+			flex-basis: auto;
+		}
+		}
+	}
+</style>
+</head>
+<body>
+<img class="image" src="헬스토매통.png" alt="헬스토매통 이미지" />
+	<div class="container">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+	<div class="box">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+</body>
+</html>
