@@ -21,7 +21,7 @@ public class BeerServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		BeerService service = new BeerService(); // TODO: 생성 방법 및 life-cycle 고민하기
+		IBeerService service = new BeerService(); // TODO: 생성 방법 및 life-cycle 고민하기
 		
 		String pageStr = req.getParameter("page");
 		String pagePerStr = req.getParameter("pagePer");

@@ -1,0 +1,17 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="simple" targetRuntime="MyBatis3Simple">
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+        connectionURL="jdbc:mysql://Localhost:3306/my_db" 
+		userId="root"
+		password="root" />
+		
+    <javaModelGenerator targetPackage="example.model" targetProject="app12"/>
+    <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="example.mapper" targetProject="src/main/java"/>
+
+    <table tableName="guestbook_message" />
+    <table tableName="books" />
+  </context>
+</generatorConfiguration>

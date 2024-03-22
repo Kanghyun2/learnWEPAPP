@@ -9,7 +9,7 @@ import lombok.Data;
 @Builder
 public class BeerDTO { // Data Transfer Object
 	private int currentPage;
-	private int itemsperPage;
+	private int itemsPerPage;
 	private int totalPages;
 	private List<Beer> items;
 }

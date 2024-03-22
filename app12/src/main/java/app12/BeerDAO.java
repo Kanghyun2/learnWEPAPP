@@ -10,7 +10,8 @@ import java.util.List;
 
 import app12.listener.MyWebContextListener;
 
-public class BeerDAO {
+public class BeerDAO implements IBeerDAO {
+	@Override
 	public int countAll() {
 		String sql = "SELECT COUNT(*) AS CNT FROM beer";
 		
@@ -26,6 +27,7 @@ public class BeerDAO {
 		return -1;
 	}
 	
+	@Override
 	public List<Beer> getAll(int limit, int offset) {
 		String sql = "SELECT * FROM beer LIMIT ? OFFSET ?";
 		List<Beer> list = new ArrayList<>();
@@ -46,6 +48,7 @@ public class BeerDAO {
 		return list;
 	}
 	
+	@Override
 	public List<Beer> getAll() {
 		String sql = "SELECT * FROM beer";
 		List<Beer> list = new ArrayList<>();
@@ -70,6 +73,7 @@ public class BeerDAO {
 		return new Beer(id, name, price);
 	}
 
+	@Override
 	public int insert(Beer beer) {
 		String sql = "INSERT INTO beer (name, price) VALUES (?, ?)";
 		try (Connection conn = MyWebContextListener.getConnection();
@@ -84,6 +88,7 @@ public class BeerDAO {
 		return 0;
 	}
 
+	@Override
 	public int delete(Integer id) {
 		String sql = "DELETE FROM beer WHERE id = ?";
 		try (Connection conn = MyWebContextListener.getConnection();
@@ -97,6 +102,7 @@ public class BeerDAO {
 		return 0;
 	}
 
+	@Override
 	public int update(Beer beer) {
 		String sql = "UPDATE beer SET name = ?, price = ? WHERE id = ?";
 		try (Connection conn = MyWebContextListener.getConnection();
