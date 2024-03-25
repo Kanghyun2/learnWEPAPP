@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
@@ -18,7 +19,11 @@ public interface PersonMapper {
 		}
 	)
 	List<Person> getAll();
-
+	
+	@Select("SELECT name, age FROM person WHERE name = #{name}")
+	@ResultMap("personResult")
+	Person getByPK(String name);
+	
 	@Insert("INSERT INTO person (name, age) VALUES (#{name}, #{age})")
 	int insert(Person p);
 }

@@ -13,4 +13,9 @@
   	<exception-type>com.fasterxml.jackson.core.JsonParseException</exception-type>
   	<location>/myerrorpage</location>
   </error-page>
+  
+  <error-page>
+  	<exception-type>app12.person.PersonAPIException</exception-type>
+  	<location>/personerror</location>
+  </error-page>
 </web-app>
