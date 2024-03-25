@@ -1,14 +1,15 @@
-package app12;
+package app12.person;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Beer {
-	private int id;
+@Builder
+public class Person {
 	private String name;
-	private int price;
+	private int age;
 }

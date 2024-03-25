@@ -13,5 +13,4 @@ public interface IBeerService {
 	int update(Beer beer);
 
 	List<Beer> getBetween(String low, String high);
-
 }

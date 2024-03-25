@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>사람 목록</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div id="container"></div>
+        <a href="personForm.html">사람 추가하기</a>
+    </body>
+    <script>
+        const container = document.getElementById("container");
+
+        fetch("http://localhost:8080/api/person")
+            .then(resp => resp.json())
+            .then(data => {
+                data.forEach(element => {
+                    let p = document.createElement("p");
+                    p.innerText = `${element.name} : ${element.age}`;
+                    container.appendChild(p);
+                });
+            });
+    </script>
+</html>

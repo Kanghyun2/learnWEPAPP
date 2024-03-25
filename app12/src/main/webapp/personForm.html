@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>사람 폼</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <form id="personForm">
+            <input type="text" name="name">
+            <input type="number" name="age">
+            <input type="submit">
+        </form>
+        <p id="message"></p>
+    </body>
+    <script>
+        const personForm = document.getElementById("personForm");
+        personForm.addEventListener("submit", process);
+
+        const messageP = document.getElementById("message");
+
+        function process(e) {
+            e.preventDefault();
+
+            let formData = new FormData(personForm);
+            let obj = Object.fromEntries(formData);
+            let json = JSON.stringify(obj);
+
+            fetch("http://localhost:8080/api/person", {
+                method: "POST"
+                , body: json
+            }).then(resp => {
+                let code = resp.status;
+
+                if (code == 201) {
+                    messageP.innerText = "성공";
+                    personForm.reset();
+                }
+            })
+        }
+    </script>
+</html>

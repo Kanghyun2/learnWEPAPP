@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +9,6 @@
 </head>
 <body>
 	<c:if test="${ not empty dto.items }">
-		<ul>
-			<c:forEach var="beer" items="${ dto.items }">
-				<li>${ beer.name }=${ beer.price }</li>
-			</c:forEach>
-		</ul>
 		<nav>
 			<c:forEach var="i" begin="1" end="${ dto.totalPages }">
 				<c:url var="url" value="/beer">
@@ -23,6 +18,11 @@
 				<a href="${ url }">${ i }</a>
 			</c:forEach>
 		</nav>
+		<ul>
+		<c:forEach var="beer" items="${ dto.items }">
+			<li>${beer.id} ${ beer.name } = ${ beer.price }</li>
+		</c:forEach>
+		</ul>
 	</c:if>
 </body>
 </html>

@@ -36,11 +36,11 @@ public interface BeerMapper {
 				SELECT("*");
 				FROM("beer");
 				if (low != null && high != null) {
-					WHERE("price BETWEEN #{arg0} AND #{arg1}");
+					WHERE("price BETWEEN #{low} AND #{high}");
 				} else if (low == null) {
-					WHERE("price <= #{arg1}");
+					WHERE("price <= #{high}");
 				} else if (high == null) {
-					WHERE("price >= #{arg0}");
+					WHERE("price >= #{low}");
 				}
 			}}.toString();
 		}
@@ -78,7 +78,7 @@ public interface BeerMapper {
 	int insert(Beer beer);
 	
 	@Delete("DELETE FROM beer WHERE id = #{id}")
-	int delete(Integer id);
+	int delete(@Param(value = "id") Integer id);
 	
 	@Update("UPDATE beer SET name = #{name}, price = #{price} WHERE id = #{id}")
 	int update(Beer beer);
